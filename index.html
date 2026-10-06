@@ -29,6 +29,48 @@
   .header { background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: #fff; padding: 24px; text-align: center; }
   .header h1 { font-size: 28px; letter-spacing: 2px; font-weight: 800; }
   .header .date { font-size: 15px; margin-top: 6px; opacity: 0.95; font-weight: 500; }
+
+  /* ===== ПАНЕЛЬ НАВИГАЦИИ ДАТ ===== */
+  .date-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .date-nav button {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.15s;
+  }
+  .date-nav button:hover { background: #2a5298; color: #fff; border-color: #2a5298; }
+  .date-nav .today-btn { padding: 6px 12px; font-size: 12px; }
+  .date-nav .label { font-size: 13px; color: #666; font-weight: 700; }
+
+  /* ===== КНОПКА ИСТОРИИ ===== */
+  .menu-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #f8f9ff;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4338ca;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.15s;
+  }
+  .menu-btn:hover { background: #eef2ff; }
+
   .content { padding: 20px 20px 24px; }
 
   .type-tiles {
@@ -52,10 +94,7 @@
     opacity: 0.95;
     margin-bottom: 4px;
   }
-  .tile .tile-sum {
-    font-size: 14px;
-    font-weight: 800;
-  }
+  .tile .tile-sum { font-size: 14px; font-weight: 800; }
   .tile.n { background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%); }
   .tile.t { background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); }
   .tile.per { background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%); }
@@ -76,12 +115,7 @@
     margin-bottom: 10px;
     text-align: center;
   }
-  .sale-inputs {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  .sale-inputs { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .sale-inputs input {
     flex: 1;
     min-width: 120px;
@@ -94,11 +128,7 @@
     color: #1e3c72;
     font-family: inherit;
   }
-  .sale-inputs input:focus {
-    outline: none;
-    border-color: #4338ca;
-    box-shadow: 0 0 0 3px rgba(67,56,202,0.15);
-  }
+  .sale-inputs input:focus { outline: none; border-color: #4338ca; box-shadow: 0 0 0 3px rgba(67,56,202,0.15); }
   .sale-inputs button {
     padding: 10px 18px;
     background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
@@ -114,11 +144,7 @@
   .sale-inputs button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(67,56,202,0.35); }
   .sale-inputs button:active { transform: scale(0.97); }
 
-  .pay-type {
-    display: flex;
-    gap: 6px;
-    margin-top: 10px;
-  }
+  .pay-type { display: flex; gap: 6px; margin-top: 10px; }
   .pay-type button {
     flex: 1;
     padding: 9px 6px;
@@ -139,12 +165,7 @@
   .pay-type button[data-type="тер"].active { background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); border-color: #ea580c; }
   .pay-type button[data-type="пер"].active { background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%); border-color: #0284c7; }
 
-  .sale-list {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+  .sale-list { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
   .sale-list:empty { display: none; }
 
   .sale-item {
@@ -163,13 +184,7 @@
     from { opacity: 0; transform: translateY(-4px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .sale-item .sale-num {
-    font-size: 12px;
-    color: #888;
-    font-weight: 700;
-    min-width: 22px;
-  }
-
+  .sale-item .sale-num { font-size: 12px; color: #888; font-weight: 700; min-width: 22px; }
   .sale-item .sale-type-edit {
     min-width: 52px;
     text-align: center;
@@ -207,13 +222,7 @@
     cursor: text;
   }
   .sale-item .sale-sum-edit:hover { border-color: #c7d2fe; background: #f8faff; }
-  .sale-item .sale-sum-edit:focus {
-    outline: none;
-    border-color: #4338ca;
-    border-style: solid;
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(67,56,202,0.15);
-  }
+  .sale-item .sale-sum-edit:focus { outline: none; border-color: #4338ca; border-style: solid; background: #fff; box-shadow: 0 0 0 3px rgba(67,56,202,0.15); }
 
   .sale-item .sale-del {
     background: #fee2e2;
@@ -244,11 +253,7 @@
     font-weight: 700;
     color: #4338ca;
   }
-  .sale-totals .tot-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  .sale-totals .tot-row { display: flex; justify-content: space-between; align-items: center; }
   .sale-totals .tot-row.total-main {
     font-size: 15px;
     padding-top: 6px;
@@ -322,9 +327,145 @@
   .type-menu button[data-type="тер"]:hover { background: #ffedd5; color: #ea580c; }
   .type-menu button[data-type="пер"]:hover { background: #e0f2fe; color: #0284c7; }
 
+  /* ===== МОДАЛЬНОЕ ОКНО ИСТОРИИ / МЕСЯЦА ===== */
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    margin: auto 0;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .modal-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-header h2 { font-size: 18px; font-weight: 800; }
+  .modal-close {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+    font-family: inherit;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.35); }
+  .modal-body { padding: 20px; max-height: 70vh; overflow-y: auto; }
+
+  .month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .month-nav button {
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    color: #4338ca;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .month-nav button:hover { background: #c7d2fe; }
+  .month-nav .month-label {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1e3c72;
+  }
+
+  .month-summary {
+    background: #f8f9ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+  .month-summary h3 {
+    font-size: 13px;
+    color: #4338ca;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .summary-item {
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e0e7ff;
+  }
+  .summary-item .si-label { font-size: 11px; color: #666; font-weight: 700; margin-bottom: 4px; }
+  .summary-item .si-value { font-size: 15px; font-weight: 800; color: #1e3c72; }
+  .summary-item.n { background: #f0fdf4; border-color: #86efac; }
+  .summary-item.n .si-value { color: #16a34a; }
+  .summary-item.t { background: #fff7ed; border-color: #fdba74; }
+  .summary-item.t .si-value { color: #ea580c; }
+  .summary-item.per { background: #f0f9ff; border-color: #7dd3fc; }
+  .summary-item.per .si-value { color: #0284c7; }
+  .summary-item.full { grid-column: 1 / -1; }
+
+  .days-list { display: flex; flex-direction: column; gap: 6px; }
+  .day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #e0e7ff;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .day-row:hover { background: #eef2ff; border-color: #a5b4fc; }
+  .day-row .dr-date { font-weight: 700; color: #1e3c72; min-width: 90px; }
+  .day-row .dr-sum { font-weight: 700; color: #4338ca; }
+  .day-row .dr-types { font-size: 11px; color: #888; display: flex; gap: 6px; }
+  .day-row .dr-types span { padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+  .day-row .dr-types .t-n { background: #dcfce7; color: #15803d; }
+  .day-row .dr-types .t-t { background: #ffedd5; color: #ea580c; }
+  .day-row .dr-types .t-per { background: #e0f2fe; color: #0284c7; }
+
+  .empty-msg {
+    text-align: center;
+    padding: 30px 20px;
+    color: #999;
+    font-size: 14px;
+  }
+
   @media (max-width: 480px) {
     .row { flex-direction: column; align-items: stretch; gap: 6px; }
     .row input { width: 100%; }
+    .summary-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -334,6 +475,15 @@
     <h1>Новый Магазин</h1>
     <div class="date" id="currentDate">—</div>
   </div>
+
+  <!-- ===== НАВИГАЦИЯ ПО ДАТАМ ===== -->
+  <div class="date-nav">
+    <button onclick="prevDay()">◀ Назад</button>
+    <button class="today-btn" onclick="goToday()">Сегодня</button>
+    <button onclick="nextDay()">Вперёд ▶</button>
+  </div>
+  <button class="menu-btn" onclick="openMonthModal()">📊 Итоги месяца</button>
+
   <div class="content">
 
     <div class="type-tiles">
@@ -373,7 +523,7 @@
     <div class="section-title">Возврат</div>
     <div class="row vozvrat"><label>Возврат наличными</label><input type="text" class="editable" inputmode="decimal" id="vozvrat"></div>
 
-    <button class="btn-clear" onclick="clearAll()">Очистить</button>
+    <button class="btn-clear" onclick="clearCurrentDay()">Очистить день</button>
   </div>
 </div>
 
@@ -383,13 +533,120 @@
   <button data-type="пер" onclick="applyType('пер')">ПЕР</button>
 </div>
 
-<script>
-const ZARPLATA = 2000;
+<!-- ===== МОДАЛЬНОЕ ОКНО: ИТОГИ МЕСЯЦА ===== -->
+<div class="modal-overlay" id="monthModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>📊 Итоги месяца</h2>
+      <button class="modal-close" onclick="closeMonthModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="month-nav">
+        <button onclick="changeMonth(-1)">◀</button>
+        <div class="month-label" id="monthLabel">—</div>
+        <button onclick="changeMonth(1)">▶</button>
+      </div>
 
-let sales = [];
+      <div class="month-summary">
+        <h3>Сводка за месяц</h3>
+        <div class="summary-grid">
+          <div class="summary-item n">
+            <div class="si-label">НАЛИЧНЫЕ</div>
+            <div class="si-value" id="mSumN">0,00 ₽</div>
+          </div>
+          <div class="summary-item t">
+            <div class="si-label">ТЕРМИНАЛ</div>
+            <div class="si-value" id="mSumT">0,00 ₽</div>
+          </div>
+          <div class="summary-item per">
+            <div class="si-label">ПЕРЕВОД</div>
+            <div class="si-value" id="mSumPer">0,00 ₽</div>
+          </div>
+          <div class="summary-item">
+            <div class="si-label">ДНЕЙ С ПРОДАЖАМИ</div>
+            <div class="si-value" id="mDays">0</div>
+          </div>
+          <div class="summary-item full">
+            <div class="si-label">ОБЩАЯ ВЫРУЧКА ЗА МЕСЯЦ</div>
+            <div class="si-value" id="mTotal" style="font-size:20px;">0,00 ₽</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px; color:#4338ca; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">По дням</h3>
+      <div class="days-list" id="monthDaysList"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== КОНСТАНТЫ ===== */
+const ZARPLATA = 2000;
+const STORAGE_KEY = 'novy-magazin-data';
+
+/* ===== СОСТОЯНИЕ ===== */
+let allData = {};       // { 'YYYY-MM-DD': { sales: [...], kassaVchera, drugie, vozvrat } }
+let currentDate = todayStr();
 let currentType = 'нал';
 let editingIndex = -1;
+let monthOffset = 0;    // 0 = текущий месяц, -1 = предыдущий и т.д.
 
+/* ===== УТИЛИТЫ ДАТ ===== */
+function todayStr() {
+  const d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function dateStrOffset(dateStr, days) {
+  const d = new Date(dateStr + 'T00:00:00');
+  d.setDate(d.getDate() + days);
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function formatDateRu(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('ru-RU', { day: '2-digit', month: 'long', year: 'numeric' });
+}
+
+function formatDateShort(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit' });
+}
+
+/* ===== ХРАНИЛИЩЕ ===== */
+function loadData() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      allData = JSON.parse(raw);
+      if (typeof allData !== 'object' || allData === null) allData = {};
+    }
+  } catch (e) {
+    console.warn('Ошибка загрузки данных', e);
+    allData = {};
+  }
+}
+
+function saveData() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(allData));
+  } catch (e) {
+    console.warn('Ошибка сохранения', e);
+  }
+}
+
+function getDay(dateStr) {
+  if (!allData[dateStr]) {
+    allData[dateStr] = { sales: [], kassaVchera: 0, drugie: 0, vozvrat: 0 };
+  }
+  return allData[dateStr];
+}
+
+function getCurrentDay() {
+  return getDay(currentDate);
+}
+
+/* ===== ФОРМАТ ===== */
 function fmt(n) {
   return (Math.round(n * 100) / 100).toLocaleString('ru-RU', {
     minimumFractionDigits: 2, maximumFractionDigits: 2
@@ -441,14 +698,29 @@ function attachMask(inp) {
     const { value, cursor } = maskValue(el.value, el.selectionStart);
     el.value = value;
     el.setSelectionRange(cursor, cursor);
+    saveCurrentInputs();
     recalc();
   });
 
   inp.addEventListener('focus', () => {
     setTimeout(() => inp.select(), 0);
   });
+
+  inp.addEventListener('blur', () => {
+    saveCurrentInputs();
+  });
 }
 
+/* ===== СОХРАНЕНИЕ ТЕКУЩИХ ВВОДОВ ===== */
+function saveCurrentInputs() {
+  const day = getCurrentDay();
+  day.kassaVchera = parseNum(document.getElementById('kassaVchera').value);
+  day.drugie = parseNum(document.getElementById('drugie').value);
+  day.vozvrat = parseNum(document.getElementById('vozvrat').value);
+  saveData();
+}
+
+/* ===== ТИП ОПЛАТЫ ===== */
 function selectType(type) {
   currentType = type;
   document.querySelectorAll('.pay-type button').forEach(btn => {
@@ -456,19 +728,24 @@ function selectType(type) {
   });
 }
 
+/* ===== ПРОДАЖИ ===== */
 function addSale() {
   const inp = document.getElementById('saleInput');
   const val = parseNum(inp.value);
   if (val <= 0) return;
-  sales.push({ sum: val, type: currentType });
+  const day = getCurrentDay();
+  day.sales.push({ sum: val, type: currentType });
   inp.value = '';
+  saveData();
   renderSales();
   recalc();
 }
 
 function removeSale(idx) {
-  sales.splice(idx, 1);
+  const day = getCurrentDay();
+  day.sales.splice(idx, 1);
   closeTypeMenu();
+  saveData();
   renderSales();
   recalc();
 }
@@ -500,8 +777,10 @@ function closeTypeMenu() {
 
 function applyType(type) {
   if (editingIndex < 0) return;
-  sales[editingIndex].type = type;
+  const day = getCurrentDay();
+  day.sales[editingIndex].type = type;
   closeTypeMenu();
+  saveData();
   renderSales();
   recalc();
 }
@@ -513,9 +792,11 @@ document.addEventListener('click', (e) => {
   }
 });
 
-function getSums() {
+/* ===== СУММЫ ===== */
+function getSums(dateStr) {
+  const day = allData[dateStr] || { sales: [] };
   let sumN = 0, sumT = 0, sumPer = 0;
-  sales.forEach(s => {
+  (day.sales || []).forEach(s => {
     if (s.type === 'нал') sumN += s.sum;
     else if (s.type === 'тер') sumT += s.sum;
     else if (s.type === 'пер') sumPer += s.sum;
@@ -523,9 +804,17 @@ function getSums() {
   return { sumN, sumT, sumPer };
 }
 
+/* ===== ОТРИСОВКА ===== */
+function renderDate() {
+  document.getElementById('currentDate').textContent = formatDateRu(currentDate);
+}
+
 function renderSales() {
   const list = document.getElementById('saleList');
   list.innerHTML = '';
+
+  const day = getCurrentDay();
+  const sales = day.sales || [];
 
   sales.forEach((sale, i) => {
     const item = document.createElement('div');
@@ -561,8 +850,9 @@ function renderSales() {
     sumInput.addEventListener('blur', () => {
       const val = parseNum(sumInput.value);
       if (val > 0) {
-        sales[i].sum = val;
+        day.sales[i].sum = val;
         sumInput.value = fmt(val).replace(' ₽', '');
+        saveData();
         renderSales();
         recalc();
       } else {
@@ -584,13 +874,12 @@ function renderSales() {
     list.appendChild(item);
   });
 
-  const { sumN, sumT, sumPer } = getSums();
+  const { sumN, sumT, sumPer } = getSums(currentDate);
   const total = sumN + sumT + sumPer;
 
   document.getElementById('tileN').textContent = fmt(sumN);
   document.getElementById('tileT').textContent = fmt(sumT);
   document.getElementById('tilePer').textContent = fmt(sumPer);
-
   document.getElementById('saleTotal').textContent = fmt(total);
 
   document.getElementById('nalichnye').value = fmt(sumN);
@@ -598,47 +887,152 @@ function renderSales() {
 }
 
 function recalc() {
+  const day = getCurrentDay();
   const kassaVchera = parseNum(document.getElementById('kassaVchera').value);
   const drugie = parseNum(document.getElementById('drugie').value);
   const vozvrat = parseNum(document.getElementById('vozvrat').value);
 
-  const { sumN, sumT, sumPer } = getSums();
+  const { sumN, sumT, sumPer } = getSums(currentDate);
   const nalichnye = sumN;
   const beznalichnye = sumT + sumPer;
 
   const vyruchka = nalichnye + beznalichnye;
-
   const kassa = kassaVchera + nalichnye - ZARPLATA - drugie + vozvrat;
 
   document.getElementById('vyruchka').value = fmt(vyruchka);
   document.getElementById('kassa').value = fmt(kassa);
 }
 
-function clearAll() {
-  document.querySelectorAll('.editable').forEach(inp => { inp.value = ''; });
-  sales = [];
-  closeTypeMenu();
+/* ===== ПЕРЕКЛЮЧЕНИЕ ДНЕЙ ===== */
+function loadDay(dateStr) {
+  currentDate = dateStr;
+  const day = getCurrentDay();
+
+  document.getElementById('kassaVchera').value = day.kassaVchera ? fmt(day.kassaVchera).replace(' ₽', '') : '';
+  document.getElementById('drugie').value = day.drugie ? fmt(day.drugie).replace(' ₽', '') : '';
+  document.getElementById('vozvrat').value = day.vozvrat ? fmt(day.vozvrat).replace(' ₽', '') : '';
+
+  renderDate();
   renderSales();
   recalc();
 }
 
-document.querySelectorAll('.editable').forEach(attachMask);
+function prevDay() {
+  saveCurrentInputs();
+  loadDay(dateStrOffset(currentDate, -1));
+}
+
+function nextDay() {
+  saveCurrentInputs();
+  loadDay(dateStrOffset(currentDate, 1));
+}
+
+function goToday() {
+  saveCurrentInputs();
+  loadDay(todayStr());
+}
+
+function clearCurrentDay() {
+  if (!confirm('Очистить все данные за ' + formatDateRu(currentDate) + '?')) return;
+  allData[currentDate] = { sales: [], kassaVchera: 0, drugie: 0, vozvrat: 0 };
+  saveData();
+  loadDay(currentDate);
+}
+
+/* ===== ИТОГИ МЕСЯЦА ===== */
+function openMonthModal() {
+  saveCurrentInputs();
+  monthOffset = 0;
+  renderMonthModal();
+  document.getElementById('monthModal').classList.add('show');
+}
+
+function closeMonthModal() {
+  document.getElementById('monthModal').classList.remove('show');
+}
+
+function changeMonth(delta) {
+  monthOffset += delta;
+  renderMonthModal();
+}
+
+function renderMonthModal() {
+  const now = new Date();
+  const target = new Date(now.getFullYear(), now.getMonth() + monthOffset, 1);
+  const year = target.getFullYear();
+  const month = target.getMonth();
+
+  document.getElementById('monthLabel').textContent =
+    target.toLocaleDateString('ru-RU', { month: 'long', year: 'numeric' });
+
+  // Собираем данные за месяц
+  let mSumN = 0, mSumT = 0, mSumPer = 0;
+  const daysInMonth = [];
+
+  Object.keys(allData).forEach(dateStr => {
+    const d = new Date(dateStr + 'T00:00:00');
+    if (d.getFullYear() === year && d.getMonth() === month) {
+      const { sumN, sumT, sumPer } = getSums(dateStr);
+      const dayTotal = sumN + sumT + sumPer;
+      if (dayTotal > 0) {
+        mSumN += sumN;
+        mSumT += sumT;
+        mSumPer += sumPer;
+        daysInMonth.push({ dateStr, sumN, sumT, sumPer, total: dayTotal });
+      }
+    }
+  });
+
+  // Сортируем по дате
+  daysInMonth.sort((a, b) => a.dateStr.localeCompare(b.dateStr));
+
+  const mTotal = mSumN + mSumT + mSumPer;
+
+  document.getElementById('mSumN').textContent = fmt(mSumN);
+  document.getElementById('mSumT').textContent = fmt(mSumT);
+  document.getElementById('mSumPer').textContent = fmt(mSumPer);
+  document.getElementById('mTotal').textContent = fmt(mTotal);
+  document.getElementById('mDays').textContent = daysInMonth.length;
+
+  const list = document.getElementById('monthDaysList');
+  list.innerHTML = '';
+
+  if (daysInMonth.length === 0) {
+    list.innerHTML = '<div class="empty-msg">За этот месяц пока нет данных</div>';
+    return;
+  }
+
+  daysInMonth.forEach(d => {
+    const row = document.createElement('div');
+    row.className = 'day-row';
+    row.innerHTML = `
+      <span class="dr-date">${formatDateShort(d.dateStr)}</span>
+      <span class="dr-types">
+        ${d.sumN > 0 ? '<span class="t-n">НАЛ ' + Math.round(d.sumN) + '</span>' : ''}
+        ${d.sumT > 0 ? '<span class="t-t">ТЕР ' + Math.round(d.sumT) + '</span>' : ''}
+        ${d.sumPer > 0 ? '<span class="t-per">ПЕР ' + Math.round(d.sumPer) + '</span>' : ''}
+      </span>
+      <span class="dr-sum">${fmt(d.total)}</span>
+    `;
+    row.addEventListener('click', () => {
+      closeMonthModal();
+      saveCurrentInputs();
+      loadDay(d.dateStr);
+    });
+    list.appendChild(row);
+  });
+}
+
+/* ===== СТАРТ ===== */
+loadData();
+selectType('нал');
+loadDay(todayStr());
 
 document.getElementById('saleInput').addEventListener('keydown', (e) => {
   if (e.key === 'Enter') { e.preventDefault(); addSale(); }
 });
 
-function setDate() {
-  const d = new Date();
-  document.getElementById('currentDate').textContent =
-    d.toLocaleDateString('ru-RU', { day: '2-digit', month: 'long', year: 'numeric' });
-}
-
-selectType('нал');
-
-setDate();
-renderSales();
-recalc();
+document.querySelectorAll('.editable').forEach(attachMask);
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
